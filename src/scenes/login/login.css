@@ -1,0 +1,29 @@
+.loginContainer {
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+  height: 100%;
+}
+
+.loginPaper {
+  display: flex;
+  padding: 25px;
+  flex-direction: column;
+  justify-content: space-between;
+  align-items: center;
+  height: 200px;
+  width: 400px;
+}
+
+.loginButtonsContainer {
+  display: flex;
+  flex-direction: row;
+  justify-content: space-between;
+  align-items: center;
+  width: 100%;
+}
+
+.loginTextField {
+  width: 100%;
+}
