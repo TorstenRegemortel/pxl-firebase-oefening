@@ -1,15 +1,30 @@
 import { auth } from './firebase';
 
 export const signInUser = async (email, password) => {
-  // oefening 1.2 log de gebruiker in.
+  try {
+    const user = await auth.signInWithEmailAndPassword(email, password);
+    return user;
+  } catch (err) {
+    return err.code;
+  }
 };
 
 export const signInAnonimously = async () => {
-  // oefening 1.3 log de gebruiker anoniem in.
+  try {
+    const user = await auth.signInAnonymously();
+    return user;
+  } catch (err) {
+    return err.code;
+  }
 };
 
 export const registerUser = async (email, password) => {
-  // oefening 1.1 registreer de gebruiker met email en wachtwoord.
+  try {
+    const user = await auth.createUserWithEmailAndPassword(email, password);
+    return user;
+  } catch (err) {
+    return err.code;
+  }
 };
 
 export const signOut = () => auth.signOut();
